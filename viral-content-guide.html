@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Виральный экспертный контент в Узбекистане — Полное руководство</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f8f9fb;--card:#fff;--sidebar:#0f172a;--sidebar-text:#94a3b8;--sidebar-active:#06b6d4;--accent:#06b6d4;--accent2:#1e3a8a;--text:#1f2937;--text2:#64748b;--border:#e2e8f0;--success:#10b981;--warn:#f59e0b;--danger:#ef4444;--purple:#7c3aed;--pink:#ec4899}
+body{font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;display:flex;min-height:100vh}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Sidebar */
+.sidebar{width:280px;background:var(--sidebar);color:var(--sidebar-text);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;padding:24px 0;z-index:100;transition:transform .3s}
+.sidebar-header{padding:0 20px 20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.sidebar-header h1{color:#fff;font-size:15px;font-weight:600;line-height:1.4}
+.sidebar-header p{font-size:11px;color:#64748b;margin-top:4px}
+.nav-group{padding:16px 0}
+.nav-group-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#475569;padding:0 20px 8px;font-weight:600}
+.nav-item{display:block;padding:7px 20px 7px 28px;font-size:13px;color:var(--sidebar-text);cursor:pointer;transition:all .15s;border-left:2px solid transparent}
+.nav-item:hover{color:#e2e8f0;background:rgba(255,255,255,.04)}
+.nav-item.active{color:var(--sidebar-active);border-left-color:var(--sidebar-active);background:rgba(6,182,212,.06)}
+
+/* Mobile toggle */
+.menu-toggle{display:none;position:fixed;top:12px;left:12px;z-index:200;background:var(--sidebar);color:#fff;border:none;border-radius:8px;width:40px;height:40px;font-size:20px;cursor:pointer}
+@media(max-width:900px){
+.sidebar{transform:translateX(-100%)}
+.sidebar.open{transform:translateX(0)}
+.menu-toggle{display:flex;align-items:center;justify-content:center}
+.main{margin-left:0!important;padding:20px!important;padding-top:60px!important}
+}
+
+/* Main */
+.main{margin-left:280px;padding:40px 48px;max-width:1100px;width:100%}
+.section{margin-bottom:48px;scroll-margin-top:24px}
+.section-number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--accent2);color:#fff;font-size:13px;font-weight:600;margin-right:10px}
+h2{font-size:22px;font-weight:700;color:var(--accent2);margin-bottom:16px;display:flex;align-items:center}
+h3{font-size:17px;font-weight:600;color:var(--text);margin:24px 0 12px}
+h4{font-size:14px;font-weight:600;color:var(--text2);margin:16px 0 8px;text-transform:uppercase;letter-spacing:.5px}
+p{margin-bottom:12px}
+.lead{font-size:17px;color:var(--text2);line-height:1.8;margin-bottom:24px;border-left:3px solid var(--accent);padding-left:16px}
+.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;margin-right:4px}
+.badge-high{background:#dcfce7;color:#166534}
+.badge-mid{background:#fef9c3;color:#854d0e}
+.badge-low{background:#fee2e2;color:#991b1b}
+.badge-info{background:#e0f2fe;color:#075985}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:20px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;text-align:center}
+.stat-card .num{font-size:28px;font-weight:700;color:var(--accent2)}
+.stat-card .label{font-size:12px;color:var(--text2);margin-top:4px}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:20px 0}
+
+/* Tables */
+.table-wrap{overflow-x:auto;margin:16px 0;border-radius:12px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--card)}
+th{background:#f1f5f9;color:var(--text2);font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.5px;padding:10px 12px;text-align:left;position:sticky;top:0}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top}
+tr:hover td{background:#f8fafc}
+.viral-tag{display:inline-block;padding:1px 8px;border-radius:4px;font-size:11px;font-weight:500}
+.vt-high{background:#dcfce7;color:#166534}
+.vt-mid{background:#fef9c3;color:#854d0e}
+
+/* Hooks */
+.hook-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
+.hook-num{width:28px;height:28px;border-radius:50%;background:var(--accent2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.hook-type{font-size:11px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.hook-text{font-size:14px;font-weight:500;margin:4px 0;color:var(--text)}
+.hook-why{font-size:12px;color:var(--text2)}
+
+/* Script */
+.script-block{border-left:3px solid var(--accent);padding:12px 16px;margin:8px 0;background:#f0fdfa;border-radius:0 8px 8px 0;font-size:14px}
+.script-time{font-weight:700;color:var(--accent2);font-size:13px}
+.script-dir{font-size:12px;color:var(--text2);font-style:italic}
+
+/* Checklist */
+.check-group{margin:12px 0}
+.check-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:14px}
+.check-box{width:18px;height:18px;border:2px solid var(--border);border-radius:4px;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s}
+.check-box.checked{background:var(--success);border-color:var(--success);color:#fff}
+.check-box.checked::after{content:'✓';font-size:12px;color:#fff}
+
+/* Tips */
+.tip{padding:12px 16px;border-radius:8px;margin:12px 0;font-size:13px;display:flex;gap:10px;align-items:flex-start}
+.tip-success{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534}
+.tip-warn{background:#fffbeb;border:1px solid #fde68a;color:#92400e}
+.tip-danger{background:#fef2f2;border:1px solid #fecaca;color:#991b1b}
+.tip-info{background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af}
+.tip-icon{font-size:16px;flex-shrink:0}
+
+/* Color swatches */
+.swatch-row{display:flex;gap:8px;margin:8px 0;flex-wrap:wrap}
+.swatch{width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:600;border:1px solid rgba(0,0,0,.1)}
+
+/* Tabs */
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:20px}
+.tab{padding:10px 20px;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .15s}
+.tab.active{color:var(--accent2);border-bottom-color:var(--accent2)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* Collapsible */
+.collapsible{margin-bottom:8px}
+.collapsible-toggle{width:100%;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px;text-align:left;cursor:pointer;font-size:14px;font-weight:600;color:var(--text);display:flex;justify-content:space-between;align-items:center;transition:all .15s}
+.collapsible-toggle:hover{background:#f8fafc}
+.collapsible-toggle::after{content:'+';font-size:18px;color:var(--text2);transition:transform .2s}
+.collapsible.open .collapsible-toggle::after{content:'-'}
+.collapsible-body{display:none;padding:16px;border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;background:var(--card)}
+.collapsible.open .collapsible-body{display:block}
+
+/* Search */
+.search-box{width:100%;padding:10px 16px 10px 40px;border:1px solid var(--border);border-radius:10px;font-size:14px;background:var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E") no-repeat 12px center;margin-bottom:20px;outline:none}
+.search-box:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(6,182,212,.1)}
+
+/* Progress */
+.progress-bar{height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin:8px 0}
+.progress-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+
+/* Intro hero */
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%);color:#fff;border-radius:16px;padding:40px;margin-bottom:32px}
+.hero h1{font-size:26px;font-weight:800;margin-bottom:12px;line-height:1.3}
+.hero p{color:#94a3b8;font-size:15px;line-height:1.7}
+.hero .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
+.hero .tag{padding:4px 12px;background:rgba(6,182,212,.15);color:#67e8f9;border-radius:20px;font-size:12px;font-weight:500}
+
+/* Funnel diagram */
+.funnel{display:flex;flex-direction:column;align-items:center;gap:4px;margin:20px 0}
+.funnel-step{padding:12px 20px;text-align:center;color:#fff;font-size:13px;font-weight:600;border-radius:8px;transition:transform .15s}
+.funnel-step:hover{transform:scale(1.03)}
+.funnel-arrow{color:var(--text2);font-size:18px}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+.sidebar::-webkit-scrollbar-thumb{background:#334155}
+
+/* Print */
+@media print{.sidebar,.menu-toggle{display:none}.main{margin-left:0;padding:20px}}
+</style>
+</head>
+<body>
+
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<nav class="sidebar" id="sidebar">
+<div class="sidebar-header">
+<h1>Виральный контент UZ</h1>
+<p>Полное руководство для EdTech CMO</p>
+</div>
+<div class="nav-group">
+<div class="nav-group-title">Разделы</div>
+<a class="nav-item active" href="#intro" onclick="closeMobile()">Введение</a>
+<a class="nav-item" href="#sec1" onclick="closeMobile()">1. Карта рынка: 35+ экспертов</a>
+<a class="nav-item" href="#sec2" onclick="closeMobile()">2. Типы контента</a>
+<a class="nav-item" href="#sec3" onclick="closeMobile()">3. Art of Hooking</a>
+<a class="nav-item" href="#sec4" onclick="closeMobile()">4. Art of Holding</a>
+<a class="nav-item" href="#sec5" onclick="closeMobile()">5. Art of Conversion</a>
+<a class="nav-item" href="#sec6" onclick="closeMobile()">6. Сценарии</a>
+<a class="nav-item" href="#sec7" onclick="closeMobile()">7. ТЗ съёмка</a>
+<a class="nav-item" href="#sec8" onclick="closeMobile()">8. ТЗ монтаж</a>
+<a class="nav-item" href="#sec9" onclick="closeMobile()">9. Визуал и брендинг</a>
+<a class="nav-item" href="#sec10" onclick="closeMobile()">10. Форма эксперта</a>
+<a class="nav-item" href="#sec11" onclick="closeMobile()">11. Почему виральность</a>
+<a class="nav-item" href="#sec12" onclick="closeMobile()">12. Чек-лист (28 п.)</a>
+<a class="nav-item" href="#sec13" onclick="closeMobile()">13. Ресурсы</a>
+<a class="nav-item" href="#conclusions" onclick="closeMobile()">Выводы и первые шаги</a>
+</div>
+</nav>
+
+<main class="main" id="main">
+
+<!-- HERO -->
+<div class="hero" id="intro">
+<h1>Виральный экспертный контент в Узбекистане</h1>
+<p>Полное руководство для EdTech CMO: карта рынка на 35+ экспертов, 25+ готовых хуков, полные сценарии, техническое ТЗ для съёмки и монтажа, верифицированная база источников и агентств.</p>
+<div class="tags">
+<span class="tag">Qalan.uz</span>
+<span class="tag">Ziyoly</span>
+<span class="tag">Testbor</span>
+<span class="tag">Instagram Reels</span>
+<span class="tag">Telegram</span>
+<span class="tag">EdTech UZ</span>
+</div>
+</div>
+
+<!-- Key metrics -->
+<div class="kpi-row">
+<div class="stat-card"><div class="num">35+</div><div class="label">Экспертов в карте</div></div>
+<div class="stat-card"><div class="num">25+</div><div class="label">Готовых хуков</div></div>
+<div class="stat-card"><div class="num">28</div><div class="label">Пунктов чек-листа</div></div>
+<div class="stat-card"><div class="num">13</div><div class="label">Разделов</div></div>
+</div>
+
+<div class="card" style="margin-bottom:32px">
+<h3>3 структурных отличия узбекского рынка</h3>
+<div class="card-grid" style="margin-top:12px">
+<div class="tip tip-info"><span class="tip-icon">1</span><div><strong>Telegram = узел конверсии.</strong> Любой Reel существует, чтобы довести зрителя до Telegram-бота или канала, где происходит продажа.</div></div>
+<div class="tip tip-info"><span class="tip-icon">2</span><div><strong>Узбекский (латиница) обогнал русский</strong> как основной язык массового экспертного контента. Стереотип «серьёзный контент — на русском» перестал работать.</div></div>
+<div class="tip tip-info"><span class="tip-icon">3</span><div><strong>Saves + Shares > Likes.</strong> Движок виральности — сохранения и пересылки в mahalla/oila-чатах. CTA «saqlab qo'ying» и «do'stingizga yuboring».</div></div>
+</div>
+</div>
+
+<!-- ============ SECTION 1 ============ -->
+<div class="section" id="sec1">
+<h2><span class="section-number">1</span> Карта рынка: 35+ экспертов</h2>
+<p class="lead">Экспертов с хотя бы одним видео 50K+ просмотров. Данные по состоянию ноябрь 2025 — апрель 2026.</p>
+
+<input class="search-box" type="text" id="expertSearch" placeholder="Поиск по имени, нише, handle..." onkeyup="filterExperts()">
+
+<!-- EdTech -->
+<h3>EdTech / Образование</h3>
+<div class="table-wrap">
+<table id="expertTable1">
+<thead><tr><th>#</th><th>Имя / @handle</th><th>Ниша</th><th>IG</th><th>YT</th><th>Язык</th><th>Вирусный пример</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Bekzod Mirahmedov</strong><br><span style="color:var(--accent)">@bekzodmirahmedov</span></td><td>IELTS (IELTS Zone)</td><td>~102K</td><td>—</td><td>Узб. + англ.</td><td>«First Niner 9.0» reveal (Kun.uz)</td></tr>
+<tr><td>2</td><td><strong>Shoxruxbek Olimov</strong><br><span style="color:var(--accent)">@shoxruxbek.olimov</span></td><td>IELTS 8.5</td><td>~43K</td><td>~56K</td><td>Узб. лат.</td><td>Reel «Writingni oshirish»</td></tr>
+<tr><td>3</td><td><strong>Asilbek Yusupov</strong><br><span style="color:var(--accent)">@asilbek.yusupovv</span></td><td>IELTS 9.0</td><td>сред.</td><td>есть</td><td>Узб. + англ.</td><td>BM Talks «3 universitet tashlab IELTS 9.0»</td></tr>
+<tr><td>4</td><td><strong>Abdurazzoq Khanov</strong><br><span style="color:var(--accent)">@abdurazzoq_khanov</span></td><td>IELTS (8.0 в 16 лет)</td><td>~16K</td><td>есть</td><td>Узб. лат.</td><td>«IELTS haqida bilmagan 3 fakt»</td></tr>
+<tr><td>5</td><td><strong>Xotam Ikromov</strong><br><span style="color:var(--accent)">@xotam.ikromov</span></td><td>EdTech + мотивация</td><td>top-20</td><td>есть</td><td>Узб. лат.</td><td>«Bu 12 maslaxat» 4.7M [V]; «Maymun biznesi» 2.9M [V]</td></tr>
+<tr><td>6</td><td><strong>IELTS Zone</strong><br><span style="color:var(--accent)">@ieltszone.uz</span></td><td>Бренд IELTS</td><td>~53K</td><td>—</td><td>Узб.</td><td>Студент-кейсы</td></tr>
+<tr><td>7</td><td><strong>IDP Uzbekistan</strong><br><span style="color:var(--accent)">@examsuz</span></td><td>Офиц. IELTS-центр</td><td>~25K</td><td>—</td><td>Узб. + рус.</td><td>Live Q&A</td></tr>
+<tr><td>8</td><td><strong>Qalan.uz</strong><br><span style="color:var(--accent)">@qalan.uz</span></td><td>Онлайн-математика 1-11</td><td>~206K</td><td>—</td><td>Узб. лат.</td><td>Родительско-детская динамика</td></tr>
+<tr><td>9</td><td><strong>Testbor.uz</strong><br><span style="color:var(--accent)">@testboruz</span></td><td>AI-math</td><td>~50K</td><td>—</td><td>Узб. + рус.</td><td>Родительские тестимониалы</td></tr>
+<tr><td>10</td><td><strong>Matematik Repetitor</strong><br><span style="color:var(--accent)">@matematik.repetitor_</span></td><td>DTM-математика</td><td>сред.</td><td>есть</td><td>Узб. лат.</td><td>1M views / 32K likes за 13 дней</td></tr>
+<tr><td>11</td><td><strong>Zohidbek Turdaliyev</strong><br><span style="color:var(--accent)">super_matematika (TG)</span></td><td>Milliy sertifikat A+</td><td>есть</td><td>—</td><td>Узб.</td><td>Olympiad rewards</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Business -->
+<h3>Бизнес / Маркетинг / Финансы</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Имя / @handle</th><th>Ниша</th><th>IG</th><th>YT</th><th>Язык</th><th>Вирусный пример</th></tr></thead>
+<tbody>
+<tr><td>12</td><td><strong>Jahongir Paziljonov</strong><br><span style="color:var(--accent)">@jahongirpaziljonov</span></td><td>Мотивация / бизнес</td><td>~5M</td><td>есть</td><td>Узб. + смеш.</td><td>Мотивационные ролики — массовый охват</td></tr>
+<tr><td>13</td><td><strong>Otabek Mahkamov</strong><br><span style="color:var(--accent)">@otabekmahkamov_</span></td><td>Интервью / мотивация</td><td>~2M</td><td>~400K</td><td>Узб. + рус.</td><td>Интервью «100 успешных»</td></tr>
+<tr><td>14</td><td><strong>Jahongir Latipov</strong><br><span style="color:var(--accent)">@latipov_uz</span></td><td>Бизнес-интервью</td><td>2.0M</td><td>сотни тыс.</td><td>Узб. лат.</td><td>«Dubaydagi eng boy o'zbek» 500K+</td></tr>
+<tr><td>15</td><td><strong>Komil Allamjonov</strong><br><span style="color:var(--accent)">@k_allamjonov</span></td><td>Политика, медиа</td><td>~238K</td><td>есть</td><td>Узб. + рус.</td><td>Репосты от С. Мирзиёевой</td></tr>
+<tr><td>16</td><td><strong>Akmal Paiziev</strong><br><span style="color:var(--accent)">@AkmalPaiziev</span></td><td>Tech (Numeo AI)</td><td>есть</td><td>крупн.</td><td>Узб. + рус.</td><td>Forbes «Илон Маск Узбекистана»</td></tr>
+<tr><td>17</td><td><strong>Behzod Hoshimov</strong><br><span style="color:var(--accent)">@HoshimovIqtisodiyoti</span></td><td>Экономика (NYU AD)</td><td>—</td><td>~20K</td><td>Узб./рус./англ.</td><td>Интервью с Д. Асемоглу 50K+ [V]</td></tr>
+<tr><td>18</td><td><strong>Dono Alixanova</strong><br><span style="color:var(--accent)">@dono.alixanova</span></td><td>Uzum/WB/marketplace</td><td>~64K</td><td>есть</td><td>Узб.</td><td>«Yillik 16 milliard»</td></tr>
+<tr><td>19</td><td><strong>Javohir Zokirov</strong><br><span style="color:var(--accent)">@hon_zokirov</span></td><td>Диаспора (Japan)</td><td>~128K</td><td>есть</td><td>Узб.</td><td>Бизнес-Japan POV</td></tr>
+<tr><td>20</td><td><strong>Azizjon Ikromov</strong><br><span style="color:var(--accent)">@motivatsiya_top_</span></td><td>Мотивация</td><td>~81K</td><td>—</td><td>Узб.</td><td>Множество 100K+ reels</td></tr>
+<tr><td>21</td><td><strong>GASHTAK UK</strong><br><span style="color:var(--accent)">@gashtak.uk</span></td><td>Диаспора-бизнес-подкаст</td><td>сред.</td><td>есть</td><td>Узб.</td><td>Интервью с О. Исаковым</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Psychology -->
+<h3>Психология / Отношения</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Имя / @handle</th><th>Ниша</th><th>IG</th><th>Язык</th><th>Вирусный пример</th></tr></thead>
+<tbody>
+<tr><td>22</td><td><strong>Umida Abdullayeva</strong><br><span style="color:var(--accent)">@umida_abdullaeva_psixolog</span></td><td>Эмоц. интеллект</td><td>~519K</td><td>Узб. + рус.</td><td>«Ayolni kaltaklaydigan erkak aslida ojiz»</td></tr>
+<tr><td>23</td><td><strong>Shoira Isakova</strong><br><span style="color:var(--accent)">@shoiraisakova_official</span></td><td>Семейный психолог</td><td>~238K</td><td>Узб. + рус.</td><td>Подкаст «ilon qaynona, alfons»</td></tr>
+<tr><td>24</td><td><strong>Naimjon Azimov</strong><br><span style="color:var(--accent)">@naimjon_azimov_</span></td><td>Травма-терапия</td><td>~61K</td><td>Узб. лат.</td><td>Клиника Taskin Markaz</td></tr>
+<tr><td>25</td><td><strong>Sitorabonu</strong><br><span style="color:var(--accent)">@psixolog_sitorabonu</span></td><td>Семейная терапия</td><td>~64K</td><td>Узб. лат.</td><td>«10,000+ oilalar ajrimini to'xtatdik»</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Health -->
+<h3>Здоровье / Фитнес / Медицина</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Имя / @handle</th><th>Ниша</th><th>IG</th><th>Язык</th><th>Вирусный пример</th></tr></thead>
+<tbody>
+<tr><td>26</td><td><strong>Mavjuda Shorasulovna</strong><br><span style="color:var(--accent)">@mavjuda_shorasulovna</span></td><td>Нутрициолог #1</td><td>~339K</td><td>Узб. лат.</td><td>«21 kun Ideal Qomat»</td></tr>
+<tr><td>27</td><td><strong>Kamila Iskhakova</strong><br><span style="color:var(--accent)">@dietolog_tashkent</span></td><td>Эндокринолог</td><td>~160K</td><td>Узб. кирил.</td><td>Weight loss «milliy ratsionda»</td></tr>
+<tr><td>28</td><td><strong>Sobira Tursunboyeva</strong></td><td>Гормональное похудение</td><td>есть</td><td>Узб.</td><td>«Gormonal ozish» курс</td></tr>
+<tr><td>29</td><td><strong>Dr. Maqsud Muxtorov</strong><br><span style="color:var(--accent)">@dr_emro</span></td><td>Педиатрия</td><td>сред.</td><td>Узб. лат.</td><td>Разбор скандала Dok-1 Max</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Religion, Law, Tech -->
+<h3>Религия / Право / Технологии</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Имя / @handle</th><th>Ниша</th><th>IG</th><th>Язык</th><th>Вирусный пример</th></tr></thead>
+<tbody>
+<tr><td>30</td><td><strong>Abdulloh domla</strong><br><span style="color:var(--accent)">@abdulloh.domla</span></td><td>Ислам (тафсир)</td><td>2.0M</td><td>Узб.</td><td>Клипы 500K+</td></tr>
+<tr><td>31</td><td><strong>Abror Muxtor Aliy</strong><br><span style="color:var(--accent)">@abrormuxtoraliy</span></td><td>Ислам (соц.)</td><td>2.0M</td><td>Узб. лат.</td><td>Миллионные просмотры</td></tr>
+<tr><td>34</td><td><strong>Xushnudbek Xudoyberdiyev</strong><br><span style="color:var(--accent)">@xushnudbek</span></td><td>Юрист-блогер #1</td><td>~663K</td><td>Узб. лат.</td><td>TG 674K, разбор законов</td></tr>
+<tr><td>35</td><td><strong>Azimjon Zukhurov</strong><br><span style="color:var(--accent)">@yurist.zukhurov</span></td><td>Бизнес-адвокат</td><td>~336K</td><td>Узб. лат.</td><td>Контрактные разборы</td></tr>
+<tr><td>36</td><td><strong>Advokat Bafakulov</strong><br><span style="color:var(--accent)">@advokat.bafakulov</span></td><td>Уголовный защитник</td><td>сред.</td><td>Узб. лат.</td><td>«Militsiyada sizni gapirtirishni 3 yo'li» 23K likes</td></tr>
+<tr><td>37</td><td><strong>Texnoplov</strong><br><span style="color:var(--accent)">@texnoplov</span></td><td>Tech-обзоры</td><td>есть</td><td>Узб. лат.</td><td>«iPhone 17 bojxona» виральный</td></tr>
+<tr><td>38</td><td><strong>Akmal Kadirov</strong><br><span style="color:var(--accent)">@kadirovdev</span></td><td>Программирование</td><td>~26K</td><td>Узб. лат.</td><td>«$3000 daromad» 100K+ YT</td></tr>
+<tr><td>39</td><td><strong>Diyorbek Umarov</strong><br><span style="color:var(--accent)">@diyorbekreal</span></td><td>Abroad / tech</td><td>~230K</td><td>Англ. + узб.</td><td>100K+ за 4 мес. без ads</td></tr>
+<tr><td>40</td><td><strong>Aziz Rahimov</strong><br><span style="color:var(--accent)">@azizrakhimov_blog</span></td><td>Память / self-dev</td><td>сред.</td><td>Узб. лат.</td><td>«Xotirangizni shu mashq bilan» 138.9K [V]</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tip tip-info">
+<span class="tip-icon">i</span>
+<div><strong>Наблюдение:</strong> Средний виральный порог — 50-150K views при 15-60K подписчиках. Верхняя планка — кросс-жанровость. Ниша «персональные финансы без институции» — зияющая дыра (Finlit.uz ЦБ — всего 12K).</div>
+</div>
+</div>
+
+<!-- ============ SECTION 2 ============ -->
+<div class="section" id="sec2">
+<h2><span class="section-number">2</span> Типы контента, ранжированные по виральности</h2>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Тип</th><th>Когда</th><th>Пример</th><th>Потенциал</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Listicle</strong> (3 ta maslahat, TOP 5)</td><td>Утилитарные советы</td><td>Xotam «Bu 12 maslaxat» 4.7M</td><td><span class="viral-tag vt-high">Очень высокий</span></td></tr>
+<tr><td>2</td><td><strong>Debunking / миф</strong> («aslida...»)</td><td>Возражение общепринятого</td><td>Abdurazzoq «3 fakt»</td><td><span class="viral-tag vt-high">Очень высокий</span></td></tr>
+<tr><td>3</td><td><strong>Transformation / student case</strong></td><td>Социальное доказательство</td><td>«15 yoshida 7.0 → Kia K5»</td><td><span class="viral-tag vt-high">Очень высокий</span></td></tr>
+<tr><td>4</td><td><strong>Comparison</strong> (B1 vs C1)</td><td>Визуальная ладдер</td><td>@tips4ielts 343.9K</td><td><span class="viral-tag vt-high">Очень высокий</span></td></tr>
+<tr><td>5</td><td><strong>Uzbek abroad / diaspora</strong></td><td>Patriotism + aspiration</td><td>Latipov «Dubai» 500K+</td><td><span class="viral-tag vt-high">Очень высокий</span></td></tr>
+<tr><td>6</td><td><strong>Educational how-to</strong></td><td>Нижняя воронка</td><td>Shoxruxbek «Writing»</td><td><span class="viral-tag vt-high">Высокий</span></td></tr>
+<tr><td>7</td><td><strong>Hot take / провокация</strong></td><td>Позиционирование</td><td>Shoira «Psixogenetiklar»</td><td><span class="viral-tag vt-mid">Средне-высокий</span></td></tr>
+<tr><td>8</td><td><strong>Q&A от подписчиков</strong></td><td>Дешёвый, масштабируемый</td><td>IDP examsuz Live</td><td><span class="viral-tag vt-high">Высокий</span></td></tr>
+<tr><td>9</td><td><strong>Challenge / serial</strong></td><td>Удержание, геймификация</td><td>Testbor «Majburiy fanlar»</td><td><span class="viral-tag vt-high">Высокий</span></td></tr>
+<tr><td>10</td><td><strong>Trend-jacking</strong></td><td>Быстрый охват</td><td>Xotam «Maymun biznesi» 2.9M</td><td><span class="viral-tag vt-high">Высокий</span></td></tr>
+<tr><td>11</td><td><strong>Celebrity examples</strong></td><td>Авторитетное зеркало</td><td>Paiziev — Forbes</td><td><span class="viral-tag vt-high">Высокий</span></td></tr>
+<tr><td>12</td><td><strong>Behind the scenes</strong></td><td>Строит доверие</td><td>Клиника-фото</td><td><span class="viral-tag vt-mid">Средний</span></td></tr>
+<tr><td>13</td><td><strong>Reaction / greenscreen</strong></td><td>Новости-джекинг</td><td>Низко развито</td><td><span class="viral-tag vt-mid">Средний (возможность)</span></td></tr>
+<tr><td>14</td><td><strong>Debate</strong> (DTM vs IELTS)</td><td>Двигает комментарии</td><td>Редко</td><td><span class="viral-tag vt-mid">Средний</span></td></tr>
+<tr><td>15</td><td><strong>Personal opinion</strong></td><td>Для бренда-лица</td><td>Xushnudbek — реформы</td><td><span class="viral-tag vt-mid">Средний</span></td></tr>
+<tr><td>16</td><td><strong>Parents' frame</strong> («Bolangiz...»)</td><td>Родитель — вторичная ЦА</td><td>Qalan.uz</td><td><span class="viral-tag vt-high">Высокий — главное для Qalan</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- ============ SECTION 3 ============ -->
+<div class="section" id="sec3">
+<h2><span class="section-number">3</span> Art of Hooking: первые 3 секунды</h2>
+
+<div class="card" style="margin-bottom:20px">
+<h3>Правила узбекского хука</h3>
+<div class="tip tip-success"><span class="tip-icon">&#10003;</span><div>Первые 2 слова = число, имя, обращение на «siz» или «bolangiz»</div></div>
+<div class="tip tip-success"><span class="tip-icon">&#10003;</span><div>Текст на экране дублирует хук жирным, верхняя треть кадра</div></div>
+<div class="tip tip-success"><span class="tip-icon">&#10003;</span><div>Zoom-punch на ключевое слово на 1-й секунде</div></div>
+<div class="tip tip-danger"><span class="tip-icon">&#10007;</span><div>Никаких «Assalomu alaykum, men...» в начале</div></div>
+<div class="tip tip-danger"><span class="tip-icon">&#10007;</span><div>Перечисление регалий — это для био, не для хука</div></div>
+<div class="tip tip-danger"><span class="tip-icon">&#10007;</span><div>Горизонтальное видео с чёрными полосами</div></div>
+</div>
+
+<h3>25+ проверенных хуков</h3>
+
+<div class="hook-card"><div class="hook-num">1</div><div><div class="hook-type">Вопрос-диагностика</div><div class="hook-text">«IELTS 7 olmoqchimisiz, lekin writing 6 da qolibmi?»</div><div class="hook-why">Называет точную боль — IELTS</div></div></div>
+
+<div class="hook-card"><div class="hook-num">2</div><div><div class="hook-type">Вопрос-вызов</div><div class="hook-text">«Bu savolga javob bera olsangiz, DTM'dan 180+ olasiz»</div><div class="hook-why">Specific outcome promise — DTM</div></div></div>
+
+<div class="hook-card"><div class="hook-num">3</div><div><div class="hook-type">Родительский вопрос</div><div class="hook-text">«Farzandingiz matematikadan nega orqada qolayotganini bilasizmi?»</div><div class="hook-why">Parent pain — K-12</div></div></div>
+
+<div class="hook-card"><div class="hook-num">4</div><div><div class="hook-type">Провокация</div><div class="hook-text">«90% o'qituvchilar buni noto'g'ri o'rgatadi»</div><div class="hook-why">In-group / out-group — Any</div></div></div>
+
+<div class="hook-card"><div class="hook-num">5</div><div><div class="hook-type">Провокация RU</div><div class="hook-text">«Уроки в школе больше не работают. Вот почему.»</div><div class="hook-why">Безопаснее на русском — Any</div></div></div>
+
+<div class="hook-card"><div class="hook-num">6</div><div><div class="hook-type">Финансовая провокация</div><div class="hook-text">«IELTS kurslari pulingizni oladi, lekin 6.0+ olmaysiz — sababi mana»</div><div class="hook-why">Loss aversion + conspiracy — IELTS</div></div></div>
+
+<div class="hook-card"><div class="hook-num">7</div><div><div class="hook-type">Шок-факт личный</div><div class="hook-text">«15 yoshida IELTS 7.0, 16 yoshida 8.0. Qanday qildim — aytaman»</div><div class="hook-why">Age shock + local — IELTS</div></div></div>
+
+<div class="hook-card"><div class="hook-num">8</div><div><div class="hook-type">Шок-факт статистика</div><div class="hook-text">«O'tgan yil 40 ming abituriyent majburiy fanlardan yiqildi. Sababi — bittada»</div><div class="hook-why">Scale + curiosity gap — DTM</div></div></div>
+
+<div class="hook-card"><div class="hook-num">9</div><div><div class="hook-type">Контраст</div><div class="hook-text">«IELTS 6+ bilan 8+ning farqli tomonlari»</div><div class="hook-why">Aspirational ladder [V — 264.5K]</div></div></div>
+
+<div class="hook-card"><div class="hook-num">10</div><div><div class="hook-type">Transformation</div><div class="hook-text">«3 oy oldin ingliz tilida "hello" ham ayta olmasdim. Bugun CNN'da intervyu berdim»</div><div class="hook-why">Story arc — English</div></div></div>
+
+<div class="hook-card"><div class="hook-num">11</div><div><div class="hook-type">Обещание с таймером</div><div class="hook-text">«Keyingi 45 sekundda IELTS Writing'ingizni 0.5 ball oshirasiz»</div><div class="hook-why">Time-boxed delta — IELTS</div></div></div>
+
+<div class="hook-card"><div class="hook-num">12</div><div><div class="hook-type">Формульное обещание</div><div class="hook-text">«Bu 3 ta formulani yodlasangiz, matematika DTM'dan 25+ kafolatlangan»</div><div class="hook-why">Specific + guarantee — DTM</div></div></div>
+
+<div class="hook-card"><div class="hook-num">13</div><div><div class="hook-type">30-dневная реформа</div><div class="hook-text">«30 kunda ingliz tilini "zero"dan B1 gacha — reja mana»</div><div class="hook-why">Deadline — English</div></div></div>
+
+<div class="hook-card"><div class="hook-num">14</div><div><div class="hook-type">История с семьёй</div><div class="hook-text">«3 oy avval men IELTS 5.5 oldim. Oila boshim quyi edi. Bugun...»</div><div class="hook-why">Oila-якорь, узб. специфика</div></div></div>
+
+<div class="hook-card"><div class="hook-num">15</div><div><div class="hook-type">История mahalla</div><div class="hook-text">«Toshkentda oddiy o'qituvchi edim, bugun 50 ming bolani o'qitaman»</div><div class="hook-why">Local-hero arc — EdTech</div></div></div>
+
+<div class="hook-card"><div class="hook-num">16</div><div><div class="hook-type">Negative command</div><div class="hook-text">«IELTS'ga tayyorlanayotgan bo'lsangiz, BU KITOBNI OLMANG»</div><div class="hook-why">Violates politeness — IELTS</div></div></div>
+
+<div class="hook-card"><div class="hook-num">17</div><div><div class="hook-type">Negative parent</div><div class="hook-text">«Farzandingizni repetitorga bermang — oldin shuni tekshiring»</div><div class="hook-why">Parent + contrarian — K-12</div></div></div>
+
+<div class="hook-card"><div class="hook-num">18</div><div><div class="hook-type">Curiosity gap</div><div class="hook-text">«Ko'pchilik bilmaydigan 1 ta usul — DTM'da 30+ ball beradi»</div><div class="hook-why">Forbidden knowledge — DTM</div></div></div>
+
+<div class="hook-card"><div class="hook-num">19</div><div><div class="hook-type">Save-hook CTA</div><div class="hook-text">«Saqlab qo'ying, keyin kerak bo'ladi»</div><div class="hook-why">Double-duty [V — 4.1M]</div></div></div>
+
+<div class="hook-card"><div class="hook-num">20</div><div><div class="hook-type">Myth bust Psy</div><div class="hook-text">«Ayolni kaltaklaydigan erkak — aslida ojiz»</div><div class="hook-why">Controversy + authority [V-Umida]</div></div></div>
+
+<div class="hook-card"><div class="hook-num">21</div><div><div class="hook-type">Контроль + еда</div><div class="hook-text">«Osh yeysiz, lekin ozasiz. Qanday?»</div><div class="hook-why">Cultural food-identity — Nutrition</div></div></div>
+
+<div class="hook-card"><div class="hook-num">22</div><div><div class="hook-type">Ислам-мягкий</div><div class="hook-text">«Bilasizmi, rasululloh s.a.v. bu haqda nima dedi?»</div><div class="hook-why">Safe religious — Religion</div></div></div>
+</div>
+
+<!-- ============ SECTION 4 ============ -->
+<div class="section" id="sec4">
+<h2><span class="section-number">4</span> Art of Holding: удержание до конца</h2>
+
+<div class="card-grid">
+<div class="card">
+<h3>Pattern Interrupts</h3>
+<p>Жёсткий cut каждые 1.5-2.5 сек со сменой сцены</p>
+<p>Zoom-punch на ключевом слове (120%)</p>
+<p>Prop reveal (сертификат, балл, тест)</p>
+<p>Text letter-by-letter + typing sound</p>
+<p>Code-switch: узб. → англ. слово → узб.</p>
+</div>
+<div class="card">
+<h3>Open Loops</h3>
+<p>На 0:05 анонс: «3-punkt — shok» — висят ради 3-го</p>
+<p>«Eng oxirida bitta hiyla beraman — uni hech kim bilmaydi»</p>
+<p>Отложенный ответ: «Qaysi 1 ta so'z essay'ni 6→7 ga oshiradi?»</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Темп и ритм</h3>
+<div class="card-grid">
+<div>
+<h4>Скорость</h4>
+<p>0.8-1.2 сек per cut — быстрее глобального среднего</p>
+<p>Речь — 170 wpm; 100 wpm → ускорение 1.3x в монтаже</p>
+<p>Исключение: авторитетное видео 3-5 сек shots (после 500K+ TG)</p>
+</div>
+<div>
+<h4>Субтитры</h4>
+<p>Жёлтый/белый + обводка 2-3px, 60-80pt, верхняя треть</p>
+<p>КАПСЛОК только на ключевых словах</p>
+<p>Эмодзи-якоря: &#10003; &#10007; &#128293; &#128204; &#128232;</p>
+<p>Никаких смешений кириллицы и латиницы в одном предложении</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<h3>Структуры middle-section</h3>
+<div class="card-grid">
+<div class="tip tip-info"><span class="tip-icon">A</span><div><strong>«3 ошибки + 1 fix»</strong><br>10 сек setup, 3x8 сек ошибок, 10 сек фикс</div></div>
+<div class="tip tip-info"><span class="tip-icon">B</span><div><strong>Story loop</strong><br>hook 0-3 → scene 3-8 → conflict 8-30 → turn 30-45 → lesson 45-55 → CTA 55-60</div></div>
+<div class="tip tip-info"><span class="tip-icon">C</span><div><strong>Demonstration</strong><br>hook → raw example → breakdown → fixed version → CTA</div></div>
+</div>
+</div>
+
+<div class="tip tip-warn">
+<span class="tip-icon">!</span>
+<div><strong>Юмор vs серьёзность:</strong> Юмор работает для English-советов, мотивации. Серьёзный тон обязателен для DTM prep, parent-targeted. Никогда не шутите про учителей как класс, религию, mahalla, регионы.</div>
+</div>
+</div>
+
+<!-- ============ SECTION 5 ============ -->
+<div class="section" id="sec5">
+<h2><span class="section-number">5</span> Art of Conversion: CTA + Lead-gen</h2>
+
+<h3>Иерархия CTA (по конверсии)</h3>
+<div style="display:flex;flex-direction:column;gap:4px;margin:16px 0">
+<div class="funnel-step" style="background:#0f172a;width:100%">1. Telegram-бот + бесплатный PDF/test — КОРОЛЬ</div>
+<div class="funnel-step" style="background:#1e3a8a;width:90%">2. «Saqlab qo'ying» — алгоритм + self-talk [V — 4.1M]</div>
+<div class="funnel-step" style="background:#2563eb;width:80%">3. «Do'stingizga yuboring» — коллективист. reshare [V — 264.5K]</div>
+<div class="funnel-step" style="background:#3b82f6;width:70%">4. «KERAK» в комментах — DM-to-bot funnel</div>
+<div class="funnel-step" style="background:#60a5fa;width:60%">5. «Obuna bo'ling» — самый слабый</div>
+</div>
+
+<h3>Воронки (приоритет для Qalan / Testbor)</h3>
+<div class="card-grid">
+<div class="card" style="border-left:3px solid #10b981">
+<h4 style="color:#10b981">Воронка #1 (основная, 3-5x)</h4>
+<p>IG Reel → Telegram-бот → платный продукт</p>
+</div>
+<div class="card" style="border-left:3px solid #3b82f6">
+<h4 style="color:#3b82f6">Воронка #2 (Testbor)</h4>
+<p>IG Reel → TG-канал → бот → диагностика → upsell</p>
+</div>
+<div class="card" style="border-left:3px solid #8b5cf6">
+<h4 style="color:#8b5cf6">Воронка #3 (LTV)</h4>
+<p>IG Reel → YouTube long 5-15 мин → Telegram</p>
+</div>
+</div>
+
+<h3>CTA-формулы (drop-in ready)</h3>
+<div class="card-grid">
+<div class="card">
+<h4>Узбекский</h4>
+<p style="font-size:14px">&#128204; «Saqlab qo'ying, DTM'gacha kerak bo'ladi &#10003;»</p>
+<p style="font-size:14px">&#128204; «To'liq darsni Telegram kanalimdan oling — link bioda»</p>
+<p style="font-size:14px">&#128204; «Do'stingizga yuboring, ikkalangiz ham foyda olasiz»</p>
+<p style="font-size:14px">&#128204; «Izohlarda "IELTS" deb yozing — 50 ta essay'ni DM qilaman»</p>
+<p style="font-size:14px">&#128204; «Farzandingiz DTM'ga tayyorlanayotgan bo'lsa — TG kanalga obuna bo'ling»</p>
+</div>
+<div class="card">
+<h4>Русский</h4>
+<p style="font-size:14px">&#128204; «Сохрани — пригодится перед DTM &#10003;»</p>
+<p style="font-size:14px">&#128204; «Полный урок — в Telegram, ссылка в шапке»</p>
+<p style="font-size:14px">&#128204; «Отправь другу — поможете друг другу»</p>
+<p style="font-size:14px">&#128204; «Напишите "IELTS" — вышлю 50 фраз в личку»</p>
+</div>
+</div>
+
+<div class="tip tip-danger">
+<span class="tip-icon">&#10007;</span>
+<div><strong>Что НЕ работает:</strong> Английские CTA вне Ташкента; agressive countdown («6 soat qoldi, 50% chegirma!»); 4+ CTA одновременно; redirect на Facebook/Odnoklassniki.</div>
+</div>
+</div>
+
+<!-- ============ SECTION 6 ============ -->
+<div class="section" id="sec6">
+<h2><span class="section-number">6</span> Сценарии: шаблон + 2 полных примера</h2>
+
+<h3>Универсальный шаблон 45-60 сек</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Блок</th><th>Время</th><th>Что делать</th></tr></thead>
+<tbody>
+<tr><td><strong>Hook</strong></td><td>0-3 сек</td><td>Число + «siz» + боль/обещание. Текст дублирует. Никакого intro.</td></tr>
+<tr><td><strong>Setup</strong></td><td>3-8 сек</td><td>Усилить ставки или ввести персонажа</td></tr>
+<tr><td><strong>Основная</strong></td><td>8-40 сек</td><td>3 beats (правило трёх): claim → example → resolution &#8804; 10 сек. Pattern interrupt на 25 сек</td></tr>
+<tr><td><strong>Нарастание</strong></td><td>40-50 сек</td><td>«Eng muhimi — ...» — самая shareable сущность</td></tr>
+<tr><td><strong>CTA</strong></td><td>50-60 сек</td><td>Max 2 CTA: save/share + Telegram. Eye-contact face-cam.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Пример 1 (узб.): «IELTS Writing 6.0 → 7.5 — 45 sekundda»</h3>
+<div class="script-block"><span class="script-time">0-3 сек</span> <span class="script-dir">[HOOK, face-cam zoom, жёлтый caption]</span><br>«IELTS Writing'da 6.0 da qotib qoldingizmi? Men ham 2 yil shu joyda edim. 3 ta o'zgarish — 7.5 ga olib chiqdi.»</div>
+<div class="script-block"><span class="script-time">3-8 сек</span> <span class="script-dir">[SETUP, cut на стол + essay на iPad]</span><br>«Aytib o'taman — o'qituvchilar buni aytmaydi, chunki ularga "lexical resource" haqida gapirish oson. Aslida muammo — boshqa joyda.»</div>
+<div class="script-block"><span class="script-time">8-18 сек</span> <span class="script-dir">[BEAT 1 — Cohesion, whiteboard B-roll]</span><br>«Birinchi: linkers'ni unutib, referencing ustida ishlang. "Moreover" — band 6. "This is why...", "Such concerns..." — band 7.5.»</div>
+<div class="script-block"><span class="script-time">18-28 сек</span> <span class="script-dir">[BEAT 2 — Task Response, red pen]</span><br>«Ikkinchi: savolning IKKALA qismiga javob bering. "To what extent do you agree?" — 2 qismdan iborat: pozitsiya + daraja. Ko'pchilik faqat "I agree" yozadi — bu avtomatik 6.0.»</div>
+<div class="script-block"><span class="script-time">28-38 сек</span> <span class="script-dir">[BEAT 3 — Grammar, phone zoom]</span><br>«Uchinchi: bitta murakkab gap har paragraphda. Conditional yoki relative clause. Bu bitta jihat band 7 grammar criteria'ni ochadi.»</div>
+<div class="script-block"><span class="script-time">38-48 сек</span> <span class="script-dir">[КЛИМАКС, face-cam]</span><br>«Mana shu 3 ta o'zgarishni 2 haftada o'quvchilarimda sinab ko'rdim — 11 tadan 9 nafari band 7+ oldi. Sizda ham ishlaydi.»</div>
+<div class="script-block"><span class="script-time">48-60 сек</span> <span class="script-dir">[CTA]</span><br>«Saqlab qo'ying — yozish oldidan bir marta ko'ring &#10003; Telegram kanalimga o'ting, 50 ta tayyor jumla — linki bioda &#128204;»</div>
+
+<h3>Пример 2 (рус.): «Математика DTM: +25 баллов за 30 дней»</h3>
+<div class="script-block"><span class="script-time">0-3 с</span> <span class="script-dir">[HOOK]</span><br>«Ваш ребёнок учит математику для DTM по учебнику? Зря. 92% тех, кто набирает 180+, делают это иначе.»</div>
+<div class="script-block"><span class="script-time">3-8 с</span> <span class="script-dir">[SETUP]</span><br>«Я 4 года готовлю абитуриентов. За 30 дней реально +25 баллов — но только если убрать 3 ошибки.»</div>
+<div class="script-block"><span class="script-time">8-18 с</span> <span class="script-dir">[BEAT 1]</span><br>«Ошибка №1: решать новые тесты каждый день. Правильно — разбирать ошибки. 1 разобранная = 10 нерешённых.»</div>
+<div class="script-block"><span class="script-time">18-28 с</span> <span class="script-dir">[BEAT 2]</span><br>«Ошибка №2: прыгать между темами. Одну тему — 3-4 дня на 100%. Потом следующая.»</div>
+<div class="script-block"><span class="script-time">28-38 с</span> <span class="script-dir">[BEAT 3]</span><br>«Ошибка №3: решать без таймера. На DTM — 1.5 минуты на задачу. С первого дня — таймер.»</div>
+<div class="script-block"><span class="script-time">38-48 с</span> <span class="script-dir">[КЛИМАКС]</span><br>«Эти 3 правила я дал Алишеру. Было 145 — стало 187. За 28 дней. Без репетитора.»</div>
+<div class="script-block"><span class="script-time">48-60 с</span> <span class="script-dir">[CTA]</span><br>«Сохраните — покажите ребёнку. В Telegram — бесплатный диагностический тест, ссылка в шапке.»</div>
+
+<h3>Фреймворки: когда какой</h3>
+<div class="card-grid">
+<div class="tip tip-success"><span class="tip-icon">HSO</span><div><strong>Hook-Story-Offer</strong> — лучший для IELTS / transformation / parent-targeted</div></div>
+<div class="tip tip-info"><span class="tip-icon">PAS</span><div><strong>Problem-Agitate-Solve</strong> — для «avoid this mistake» хуков, majburiy fanlar DTM</div></div>
+<div class="tip tip-warn"><span class="tip-icon">AIDA</span><div><strong>Attention-Interest-Desire-Action</strong> — OK для бренд-анонсов, слабее для эксперт-персоналии</div></div>
+</div>
+</div>
+
+<!-- ============ SECTION 7 ============ -->
+<div class="section" id="sec7">
+<h2><span class="section-number">7</span> ТЗ для съёмки (Production)</h2>
+
+<h3>Камера</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Уровень</th><th>Техника</th><th>Когда</th><th>Стоимость/день</th></tr></thead>
+<tbody>
+<tr><td><span class="badge badge-info">Entry</span></td><td>iPhone 13+ / Samsung S22+</td><td>Первые 3-6 мес., соло-Reels</td><td>0 (свой)</td></tr>
+<tr><td><span class="badge badge-mid">Mid</span></td><td>Sony ZV-E10 / Fujifilm X-S20</td><td>Брендированные Shorts</td><td>$30-60</td></tr>
+<tr><td><span class="badge badge-high">Pro</span></td><td>Sony A7 IV / Canon R6 II</td><td>Флагман, реклама</td><td>$100-200</td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:13px;color:var(--text2)">4K 3840x2160 съёмка → экспорт 1080x1920 9:16. 30fps talking-head, 60fps b-roll. H.264 MP4, 10-15 Mbps. Rec.709 SDR.</p>
+
+<h3>Свет</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Вариант</th><th>Стоимость (Ташкент)</th></tr></thead>
+<tbody>
+<tr><td>Окно 10:00-15:00, 45° к лицу</td><td>0</td></tr>
+<tr><td>Кольцо 18" / софтбокс 85cm LED</td><td>500K-1.5M so'm (~$40-120)</td></tr>
+<tr><td>2-point: key + fill reflector</td><td>2-3.5M so'm (~$160-280)</td></tr>
+<tr><td>3-point: key + fill + rim + background</td><td>6-10M so'm (~$480-800)</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Звук</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Оборудование</th><th>Цена</th><th>Применение</th></tr></thead>
+<tbody>
+<tr><td>Boya BY-M1 wired</td><td>$15-20</td><td>Соло за столом</td></tr>
+<tr><td>Boya BY-WM4 Pro K2</td><td>$50-70</td><td>Entry wireless, двое</td></tr>
+<tr><td>DJI Mic 2 / Mic Mini</td><td>$250-330</td><td>Стандарт Ташкента, 32-bit</td></tr>
+<tr><td>Rode Wireless GO II</td><td>$300-400</td><td>Индустрия default</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Локации (Tashkent)</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Вариант</th><th>Плюсы</th><th>Стоимость</th></tr></thead>
+<tbody>
+<tr><td>Домашний кабинет</td><td>Бесплатно, authentic, повторяемо</td><td>0</td></tr>
+<tr><td>Paramedia Studio</td><td>Билингв. команда, субтитры</td><td>~$300-700/полдня</td></tr>
+<tr><td>Makarenko Production</td><td>BBC/Arte уровень</td><td>По запросу</td></tr>
+<tr><td>IT Park Tashkent</td><td>Бесплатно резидентам, innovation-фон</td><td>0-дёшево</td></tr>
+<tr><td>Co-working</td><td>Современный, дёшево</td><td>200-500K so'm/час</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Одежда эксперта</h3>
+<div class="card-grid">
+<div class="tip tip-info"><span class="tip-icon">&#128084;</span><div><strong>Строгий костюм</strong> — право, финансы, серьёзный IELTS</div></div>
+<div class="tip tip-success"><span class="tip-icon">&#10003;</span><div><strong>Business casual</strong> — дефолт для EdTech (sweet spot)</div></div>
+<div class="tip tip-info"><span class="tip-icon">&#128085;</span><div><strong>Фирменный polo/T</strong> — молодые педагоги, IT (15-25)</div></div>
+<div class="tip tip-warn"><span class="tip-icon">!</span><div><strong>Do'ppi</strong> — Navro'z, Ramazon, Hayit (аутентично, не пандеринг)</div></div>
+</div>
+</div>
+
+<!-- ============ SECTION 8 ============ -->
+<div class="section" id="sec8">
+<h2><span class="section-number">8</span> ТЗ для монтажа</h2>
+
+<div class="card-grid">
+<div class="card">
+<h3>Темп</h3>
+<p>Cuts каждые 2-3 сек дефолт</p>
+<p>1-2 сек для Gen Z</p>
+<p>3-5 сек для 30+ parent audience</p>
+<p>Первые 3 сек — никакого статичного кадра</p>
+</div>
+<div class="card">
+<h3>Субтитры</h3>
+<p>Sans-serif 60-80pt semibold</p>
+<p>Белый + чёрная обводка 2-3px</p>
+<p>Lower third, выше 260px от низа</p>
+<p>Max 3 сек на экране</p>
+<p>CapCut / Submagic / Descript</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Музыка и звук</h3>
+<p>Фоновая музыка: -18...-22 LUFS, голос на 10-12 dB выше. EdTech — cinematic lofi, light orchestral. Национальные инструменты (dutar, rubob) — сильный узб. хук, но поляризующий для урбан. IG: trending audio ежедневно. YT: Epidemic Sound / Artlist / YT Audio Library.</p>
+</div>
+
+<h3>Длительность под формат</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Длительность</th><th>Применение</th></tr></thead>
+<tbody>
+<tr><td>7-15 сек</td><td>Hook-only, pattern interrupt</td></tr>
+<tr><td>15-30 сек</td><td>Tip / myth-buster — высший ceiling на IG</td></tr>
+<tr><td><strong>30-60 сек</strong></td><td><strong>«3 ошибки» — золотой стандарт</strong></td></tr>
+<tr><td>60-90 сек</td><td>Deep-dive, story-driven</td></tr>
+<tr><td>3-10 мин</td><td>YT long-form</td></tr>
+<tr><td>10-20 мин</td><td>YT интервью (вырезать 4-6 Reels)</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>10 типичных ошибок монтажа</h3>
+<div style="columns:2;column-gap:16px">
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">1</span><div>Нет субтитров или только кириллица</div></div>
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">2</span><div>Музыка громче голоса</div></div>
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">3</span><div>15-сек intro до хука</div></div>
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">4</span><div>Водяной знак огромный по центру</div></div>
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">5</span><div>Пересыщенный teal/orange LUT</div></div>
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">6</span><div>Горизонтальная → растянутая вертикаль</div></div>
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">7</span><div>Horizontal talking-head с полосами</div></div>
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">8</span><div>Нет CTA / ссылки в bio</div></div>
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">9</span><div>Дословный перенос без культ. адаптации</div></div>
+<div class="tip tip-danger" style="break-inside:avoid;margin-bottom:8px"><span class="tip-icon">10</span><div>Игнор Telegram — Reels не кросс-пост</div></div>
+</div>
+</div>
+
+<!-- ============ SECTION 9 ============ -->
+<div class="section" id="sec9">
+<h2><span class="section-number">9</span> Визуал и брендинг</h2>
+
+<h3>Цветовые схемы</h3>
+<div class="card-grid">
+<div class="card" style="border-left:3px solid #1E3A8A">
+<h4>A. Modern Global EdTech (рекомендуемый дефолт)</h4>
+<div class="swatch-row">
+<div class="swatch" style="background:#1E3A8A">indigo</div>
+<div class="swatch" style="background:#0F172A">navy</div>
+<div class="swatch" style="background:#06B6D4">cyan</div>
+<div class="swatch" style="background:#FACC15;color:#333">yellow</div>
+<div class="swatch" style="background:#F8FAFC;color:#333;border-color:#ccc">white</div>
+<div class="swatch" style="background:#1F2937">charcoal</div>
+</div>
+<p style="font-size:13px;margin-top:8px">International, trustworthy, как Duolingo/Coursera</p>
+</div>
+<div class="card" style="border-left:3px solid #0099B5">
+<h4>B. National / Heritage (sparingly)</h4>
+<div class="swatch-row">
+<div class="swatch" style="background:#0099B5">sky-blue</div>
+<div class="swatch" style="background:#FFFFFF;color:#333;border-color:#ccc">white</div>
+<div class="swatch" style="background:#1EB53A">green</div>
+<div class="swatch" style="background:#CE1126">red</div>
+</div>
+<p style="font-size:13px;margin-top:8px">Для юбилеев, Navro'z, Mustaqillik. Over-use = jingoistic</p>
+</div>
+</div>
+
+<h3>Шрифты (узб. латиница + кириллица + O', G')</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Шрифт</th><th>Latin</th><th>Cyrillic</th><th>O'/G'</th><th>Замечание</th></tr></thead>
+<tbody>
+<tr><td><strong>Inter</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>Рекомендуемый дефолт</td></tr>
+<tr><td>Manrope</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>Современный, теплее</td></tr>
+<tr><td>Roboto</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>Google-safe</td></tr>
+<tr><td>Golos Text</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>Сильная кириллица</td></tr>
+<tr><td>IBM Plex Sans</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>Tech ниша</td></tr>
+<tr><td>Montserrat</td><td>&#10003;</td><td>&#9888;</td><td>&#9888;</td><td>Over-used, quirks</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip tip-warn"><span class="tip-icon">!</span><div>Тест обязателен на словах с апострофом: o'zbekcha, g'alaba, biling'iz — многие шрифты ломают.</div></div>
+</div>
+
+<!-- ============ SECTION 10 ============ -->
+<div class="section" id="sec10">
+<h2><span class="section-number">10</span> Форма эксперта</h2>
+
+<div class="card-grid">
+<div class="card">
+<h3>Поза и кадрирование</h3>
+<div class="table-wrap" style="margin:0">
+<table>
+<tbody>
+<tr><td><strong>Сидя за столом</strong></td><td>Дефолт EdTech, «урок»</td></tr>
+<tr><td><strong>Стоя</strong></td><td>Энергия, анонсы</td></tr>
+<tr><td><strong>Walking</strong></td><td>Динамика, lifestyle</td></tr>
+<tr><td><strong>За доской</strong></td><td>Туториалы, разбор</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="card">
+<h3>Жесты и голос</h3>
+<p>Открытые ладони = доверие (культурно сильно в Uz)</p>
+<p>Палец в камеру — избегать (агрессивно)</p>
+<p>Eye contact 90% в линзу</p>
+<p>Голос: mid-register, тёплый, на 10-20% ниже «excited pitch»</p>
+<p>Узб. темп: 140-160 wpm для 30+, 170-190 молодёжь</p>
+<p>Рус. темп: 130-150 wpm</p>
+</div>
+</div>
+
+<div class="tip tip-warn">
+<span class="tip-icon">!</span>
+<div><strong>Uyat-баланс:</strong> НЕ «Я лучший X в Узбекистане» (триггерит backlash). ДА — contrarian claim. Авторитет через инсайт. Social proof через 3-е лицо. Modesty-маркеры: «Men ham xato qilganman...»</div>
+</div>
+</div>
+
+<!-- ============ SECTION 11 ============ -->
+<div class="section" id="sec11">
+<h2><span class="section-number">11</span> Почему контент становится виральным в UZ</h2>
+
+<div class="card-grid">
+<div class="card">
+<h3>Алгоритмические факторы</h3>
+<p>Retention > 60% на 30-сек Reel — green</p>
+<p>Shares > 1% от views — boost вероятен</p>
+<p>Save rate > 2% — strong для EdTech</p>
+<p>Ответ на первые 10 комментариев за 60 мин — буст</p>
+<p>Локальный контент: +40% engagement vs generic (101 Digital, 2026)</p>
+</div>
+<div class="card">
+<h3>Эмоциональные триггеры</h3>
+<p>Удивление (shock-факт)</p>
+<p>Гнев справедливости (injustice)</p>
+<p>Узнавание («bolangiz bilan ham shunaqami?»)</p>
+<p>Радость победы (DTM transformation)</p>
+<p>Страх потери (parent-DTM anxiety)</p>
+<p>Семейная гордость</p>
+</div>
+</div>
+
+<h3>Культурные коды UZ (что драйвит шеры)</h3>
+<div class="card-grid">
+<div class="tip tip-success"><span class="tip-icon">&#128104;&#8205;&#128105;&#8205;&#128103;</span><div><strong>Oila values</strong> — «farzandingiz uchun» конвертирует 2-3x лучше «o'zingiz uchun»</div></div>
+<div class="tip tip-success"><span class="tip-icon">&#127968;</span><div><strong>Mahalla pride</strong> — «Bizning mahalladan Harvard'ga» — разлетается по TG-группам</div></div>
+<div class="tip tip-success"><span class="tip-icon">&#127482;&#127487;</span><div><strong>Uzbeks abroad</strong> — Dubai, USA, Korea. Золото для EdTech</div></div>
+<div class="tip tip-success"><span class="tip-icon">&#127873;</span><div><strong>Generosity code</strong> — «Bepul beraman» — разлетается в family groups</div></div>
+</div>
+
+<h3>Uyat-риски (что получает backlash)</h3>
+<div class="card-grid">
+<div class="tip tip-danger"><span class="tip-icon">&#10007;</span><div>Высмеивать учителей как класс</div></div>
+<div class="tip tip-danger"><span class="tip-icon">&#10007;</span><div>Открытый показ роскоши</div></div>
+<div class="tip tip-danger"><span class="tip-icon">&#10007;</span><div>Dismissing религии или традиции</div></div>
+<div class="tip tip-danger"><span class="tip-icon">&#10007;</span><div>Региональные slurs</div></div>
+</div>
+
+<h3>Чем UZ отличается от глобальных трендов</h3>
+<div class="card">
+<p><strong>Telegram</strong> — слой конверсии (не Instagram). Глобально воронки на landing page; в UZ — в TG-боте.</p>
+<p><strong>Bilingual posting</strong> обязателен (узб. латиница primary + русский secondary).</p>
+<p><strong>Сохраняют и пересылают больше, чем лайкают</strong> — CTA вокруг saves/shares.</p>
+<p><strong>Engagement rate</strong> анормально высок: IG 5-7%, TikTok до 10%.</p>
+<p><strong>Контент-календарь</strong> культурно привязан: Ramazon, Hayit, Navro'z, 1-сентября, DTM-сезон.</p>
+<p><strong>Родители — вторая аудитория;</strong> решение о покупке на семейном TG-чате.</p>
+</div>
+</div>
+
+<!-- ============ SECTION 12 ============ -->
+<div class="section" id="sec12">
+<h2><span class="section-number">12</span> Чек-лист виральной единицы контента (28 пунктов)</h2>
+
+<h3>Пре-продакшн (10)</h3>
+<div class="check-group" id="checkPre">
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Идея валидирована — проверен IG/YT на аналог</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Одно ядро сообщения (1 видео = 1 takeaway)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Хук написан (число + «siz» + боль/обещание)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Скрипт по таймкодам (30 сек = ~75 слов узб. / ~65 рус.)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>CTA определён — одно next action</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Shot list — CU, MS, WS, 3+ b-roll insert</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Wardrobe подтверждён — не как в прошлых 2 видео</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Локация забронирована / чиста / освещена</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Свет протестирован — экспозиция по коже</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Звук протестирован — 10 сек запись + playback</div></div>
+</div>
+
+<h3>Продакшн (4)</h3>
+<div class="check-group" id="checkProd">
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>3-5 дублей на сегмент, keeper отмечен</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>B-roll отснят (мин. 2 мин usable)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Room tone записан (30 сек)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Backup audio на телефоне параллельно</div></div>
+</div>
+
+<h3>Пост-продакшн (8)</h3>
+<div class="check-group" id="checkPost">
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Cut to pacing (2-3 сек cuts)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Хук на 0:00, никаких intro cards</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Субтитры burned-in (узб. латиница primary)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Text overlays синхронизированы</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Music -18..-22 LUFS, trending audio для IG</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Color grade (консистентный LUT серии)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Outro card с CTA (1.5 сек)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Экспорт 1080x1920, 30fps, 10-15 Mbps, MP4</div></div>
+</div>
+
+<h3>Публикация (6)</h3>
+<div class="check-group" id="checkPub">
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Thumbnail — high-contrast, лицо + 5 слов узб. лат.</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Caption — hook + value + CTA, keywords до «...more»</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Хэштеги 12-18: broad + mid + niche + branded</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Время: 19-22 прайм, вт/ср/чт/вс. Избегать пт 12-14 (Juma)</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Кросс-пост: IG → YT Shorts → TG video → FB Reels</div></div>
+<div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><div>Мониторинг 1ч — retention, shares, saves; ответы на 10 комментов</div></div>
+</div>
+
+<div id="checkProgress" style="margin-top:16px">
+<div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text2)">
+<span>Прогресс</span>
+<span id="checkCount">0 / 28</span>
+</div>
+<div class="progress-bar"><div class="progress-fill" id="checkBar" style="width:0%"></div></div>
+</div>
+</div>
+
+<!-- ============ SECTION 13 ============ -->
+<div class="section" id="sec13">
+<h2><span class="section-number">13</span> Ресурсы для поиска референсов</h2>
+
+<h3>13A. Инфлюенсер-базы</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Название</th><th>Тип</th><th>Стоимость</th></tr></thead>
+<tbody>
+<tr><td><a href="https://modash.io/find-influencers/uzbekistan" target="_blank">Modash.io</a></td><td>IG/YT/TikTok, 183+ UZ, фильтры</td><td>от $120/мес</td></tr>
+<tr><td><a href="https://starngage.com/app/global/influencer/ranking/uzbekistan" target="_blank">StarNgage</a></td><td>2,311 UZ инфлюенсеров</td><td>free/paid</td></tr>
+<tr><td><a href="https://heepsy.com" target="_blank">Heepsy</a></td><td>Auto-vetted, location-verified</td><td>free/paid</td></tr>
+<tr><td><a href="https://viralpitch.co" target="_blank">Viral Pitch</a></td><td>Топ-100 IG UZ</td><td>free</td></tr>
+<tr><td><a href="https://influence.co" target="_blank">Influence.co</a></td><td>377+ self-registered UZ</td><td>free</td></tr>
+<tr><td><a href="https://uz.tgstat.com/en" target="_blank">TGStat UZ</a></td><td>1,800+ Marketing, 9,200+ Education TG</td><td>free</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>13B. Узбекские агентства</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Название</th><th>Тип</th></tr></thead>
+<tbody>
+<tr><td><a href="https://influencelab.uz" target="_blank">Influence Lab UZ</a></td><td>Full-service IM агентство</td></tr>
+<tr><td><a href="https://wunder-digital.uz" target="_blank">Wunder Digital UZ</a></td><td>Первое агентство с Telegram Ads в UZ</td></tr>
+<tr><td><a href="https://paramedia.uz" target="_blank">Paramedia Production</a></td><td>Full-cycle видеопродакшн, bilingual — ключевой контакт</td></tr>
+<tr><td><a href="https://makarenko.uz" target="_blank">Makarenko Production</a></td><td>BBC / Arte уровень</td></tr>
+<tr><td><a href="https://101digital.uz" target="_blank">101 Digital</a></td><td>Digital, Telegram/targeting blog 2026</td></tr>
+<tr><td><a href="https://munamedia.me" target="_blank">Muna Media</a></td><td>Telegram-marketing (300+ UZ каналов)</td></tr>
+<tr><td><a href="https://marketing.uz" target="_blank">Marketing.uz</a></td><td>TAF festival + Digital Marketing Forum</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>13C. Медиа</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Название</th><th>Язык</th><th>Для чего</th></tr></thead>
+<tbody>
+<tr><td><a href="https://gazeta.uz" target="_blank">Gazeta.uz</a></td><td>UZ/RU/EN</td><td>Общие новости, тренды</td></tr>
+<tr><td><a href="https://kun.uz" target="_blank">Kun.uz</a></td><td>UZ/RU/EN</td><td>Крупнейшая UZ аудитория (IG 6.4M!)</td></tr>
+<tr><td><a href="https://daryo.uz" target="_blank">Daryo.uz</a></td><td>UZ/RU/EN</td><td>Бизнес, технологии</td></tr>
+<tr><td><a href="https://spot.uz" target="_blank">Spot.uz</a></td><td>UZ/RU</td><td>Бизнес-кейсы, стартапы, PR</td></tr>
+<tr><td><a href="https://hook.report" target="_blank">Hook.report</a></td><td>RU</td><td>Независимая аналитика</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>13D-G. Дополнительные ресурсы</h3>
+<div class="card-grid">
+<div class="card">
+<h4>TG-каналы SMM</h4>
+<p><a href="https://t.me/uzbekmarketing" target="_blank">@uzbekmarketing</a> — офиц. MKTG Association</p>
+<p><a href="https://t.me/raqamlimarketing" target="_blank">@raqamlimarketing</a> — digital-туториалы</p>
+<p><a href="https://t.me/RepostUZ" target="_blank">@RepostUZ</a> — новости</p>
+</div>
+<div class="card">
+<h4>IG/YT хэштеги для поиска</h4>
+<p>#uzreels #uzbekistan_reels #uzbekistan #toshkent #uzb #uzbekstars #uzinstagram #talimuz #ieltsuz</p>
+</div>
+<div class="card">
+<h4>Tech / EdTech</h4>
+<p><a href="https://it-park.uz" target="_blank">IT Park UZ</a> — 1,500+ стартапов, co-working, ивенты</p>
+<p><a href="https://itpu.uz/en" target="_blank">IT Park University</a> — EPAM-партнёр</p>
+</div>
+<div class="card">
+<h4>Приоритет подписки</h4>
+<p><strong>Еженедельно:</strong> Marketing.uz TG, Wunder blog, Spot.uz, TGStat, Kun.uz</p>
+<p><strong>Ежемесячно:</strong> Modash, StarNgage, Hook.report, BYYD, 101 Digital</p>
+</div>
+</div>
+</div>
+
+<!-- ============ CONCLUSIONS ============ -->
+<div class="section" id="conclusions">
+<h2><span class="section-number">&#9733;</span> Ключевые выводы и первые шаги</h2>
+
+<h3>Три стратегических сдвига для Qalan / Ziyoly / Testbor</h3>
+
+<div class="card" style="border-left:4px solid #10b981">
+<h4 style="color:#10b981">1. Каждый Reel → Telegram-бот</h4>
+<p>Telegram — слой конверсии, не вторичный канал. Каждый вирусный Reel должен вести в бот с бесплатной диагностикой. Testbor уже имеет инфраструктуру — систематизируйте в каждый CTA.</p>
+</div>
+
+<div class="card" style="border-left:4px solid #3b82f6">
+<h4 style="color:#3b82f6">2. Назначьте лица бренда</h4>
+<p>Brand-аккаунты без человека не пробивают 50K views. Рекрутируйте 2-3 узбекских учителя в архетипах: @shoxruxbek.olimov, Shoira Isakova, Xushnudbek — стройте контент от первого лица.</p>
+</div>
+
+<div class="card" style="border-left:4px solid #8b5cf6">
+<h4 style="color:#8b5cf6">3. Родительская аудитория через mahalla-пересылку</h4>
+<p>Основной покупатель K-12 — родитель из семейного TG-чата. Оптимизируйте для screenshot-shareability и parent-frame hooks. Reel о ребёнке, не о платформе → 3x быстрее разлетается.</p>
+</div>
+
+<h3>Пилотный бэклог на 30 дней</h3>
+<div class="kpi-row">
+<div class="stat-card"><div class="num">10</div><div class="label">Transformation Reels с именем студента</div></div>
+<div class="stat-card"><div class="num">5</div><div class="label">Debunking DTM/IELTS мифов</div></div>
+<div class="stat-card"><div class="num">5</div><div class="label">«Bolangizga aytmang...» хуков</div></div>
+<div class="stat-card"><div class="num">4</div><div class="label">Еженедельных DTM-челленджей</div></div>
+<div class="stat-card"><div class="num">6</div><div class="label">Trend-jacks на узб. саундах</div></div>
+</div>
+
+<div class="tip tip-success" style="margin-top:16px">
+<span class="tip-icon">&#127919;</span>
+<div><strong>KPI:</strong> Не лайки, а retention 3s/15s, save-rate и переход в бот — именно они драйвят узбекскую алгоритмическую кривую.</div>
+</div>
+</div>
+
+<div style="text-align:center;padding:40px 0;color:var(--text2);font-size:13px;border-top:1px solid var(--border);margin-top:40px">
+Виральный экспертный контент в Узбекистане — Полное руководство для EdTech CMO<br>
+Данные: ноябрь 2025 — апрель 2026 | Qalan.uz / Ziyoly / Testbor
+</div>
+
+</main>
+
+<script>
+function closeMobile(){document.querySelector('.sidebar').classList.remove('open')}
+
+// Smooth scroll & active nav
+document.querySelectorAll('.nav-item').forEach(item=>{
+item.addEventListener('click',function(e){
+e.preventDefault();
+const id=this.getAttribute('href').slice(1);
+const el=document.getElementById(id);
+if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+this.classList.add('active');
+})
+});
+
+// Scroll spy
+const sections=[...document.querySelectorAll('.section, .hero')];
+const navItems=[...document.querySelectorAll('.nav-item')];
+window.addEventListener('scroll',()=>{
+let current='';
+sections.forEach(s=>{
+const top=s.getBoundingClientRect().top;
+if(top<150)current=s.id;
+});
+navItems.forEach(n=>{
+n.classList.remove('active');
+if(n.getAttribute('href')==='#'+current)n.classList.add('active');
+});
+});
+
+// Expert search
+function filterExperts(){
+const q=document.getElementById('expertSearch').value.toLowerCase();
+document.querySelectorAll('table tbody tr').forEach(r=>{
+r.style.display=r.textContent.toLowerCase().includes(q)?'':'none';
+});
+}
+
+// Checklist
+function toggleCheck(el){
+el.classList.toggle('checked');
+updateProgress();
+}
+function updateProgress(){
+const total=document.querySelectorAll('.check-box').length;
+const done=document.querySelectorAll('.check-box.checked').length;
+document.getElementById('checkCount').textContent=done+' / '+total;
+document.getElementById('checkBar').style.width=(done/total*100)+'%';
+}
+
+// Collapsible
+document.querySelectorAll('.collapsible-toggle').forEach(btn=>{
+btn.addEventListener('click',()=>{btn.parentElement.classList.toggle('open')});
+});
+</script>
+
+</body>
+</html>
